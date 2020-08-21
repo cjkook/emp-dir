@@ -1,30 +1,32 @@
 import React from "react";
 import "./style.css";
 
-function SquidwardCard() {
+function EmpCard(props) {
+  // console.log(props)
   return (
     <div className="card">
       <div className="img-container">
-        <img
-          alt="Squidward"
-          src="https://vignette2.wikia.nocookie.net/fictionalcharacters/images/a/ac/Squidward.png/revision/latest?cb=20131121012626"
-        />
+        <img alt={props.name} src={props.image} />
       </div>
       <div className="content">
         <ul>
           <li>
-            <strong>Name:</strong> Squidward
+            <strong>Name:</strong> {props.name}
           </li>
           <li>
-            <strong>Occupation:</strong> Cashier
+            <strong>Occupation:</strong> {props.job}
           </li>
           <li>
-            <strong>Location:</strong> An Easter Island Head
+            <strong>Location:</strong> {props.home}
           </li>
         </ul>
       </div>
+      <span className="remove" onClick={props.handleDelete}>
+        𝘅
+      </span>
     </div>
   );
 }
 
-export default SquidwardCard;
+export default EmpCard;
+
