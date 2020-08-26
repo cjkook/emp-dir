@@ -19,6 +19,9 @@ function EmpCard(props) {
           <li>
             <strong>Location:</strong> {props.home}
           </li>
+          <li>
+            <strong>Network:</strong> {props.network}
+          </li>
         </ul>
       </div>
       <span className="remove" onClick={props.handleDelete}>
