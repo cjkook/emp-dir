@@ -69,8 +69,14 @@ class App extends React.Component {
     this.setState({ results: data });
   };
 
-  handleFilterNetwork = () => {
-    return "nice";
+  handleFilterNetwork = (k) => {
+    this.setState({ results: Cartoons }, () => {
+      if(k !== "All") {
+        this.setState({
+          results: this.state.results.filter((entry) => entry.network === k),
+        });
+      }
+    });
   };
 
   render() {
@@ -101,24 +107,8 @@ class App extends React.Component {
                 handleDelete={() => this.handleDelete(toon.id)}
               />
             ))}
-            {/* <Card>
-            <Card.Img variant="top" src="holder.js/100px160" />
-            <Card.Body>
-              <Card.Title>Card title that wraps to a new line</Card.Title>
-              <Card.Text>
-                This is a longer card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </Card.Text>
-            </Card.Body>
-          </Card> */}
           </CardColumns>
         </Container>
-
-        <Wrapper>
-          {/* this is going to use conditional searches  */}
-          {/* must reference the state  */}
-        </Wrapper>
       </>
     );
   }
