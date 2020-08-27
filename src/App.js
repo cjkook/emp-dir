@@ -27,10 +27,10 @@ class App extends React.Component {
     })(),
   };
 
-  // When this component mounts, search the Giphy API for pictures of kittens
+  // When this component mounts
   componentDidMount() {
     console.log("mounted");
-    console.log(this.state);
+    document.title = "Cartoon Employee"
     this.setState({ results: Cartoons });
   }
 
@@ -82,7 +82,7 @@ class App extends React.Component {
   render() {
     return (
       <>
-        <Title>Cartoons</Title>
+        <Title>Cartoon Employment Directory</Title>
         <TabMenu
           networks={this.state.networks}
           handleFilterNetwork={this.handleFilterNetwork}
