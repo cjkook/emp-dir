@@ -1,5 +1,4 @@
 # Cartoon Employee Directory
-PWA Example
 
   * [Description](#description)
   * [Install](#install)

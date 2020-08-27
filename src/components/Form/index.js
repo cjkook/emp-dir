@@ -21,4 +21,8 @@ function Form(props) {
   )
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> parent of a955d6f... Updates
 export default Form;
