@@ -30,7 +30,7 @@ class App extends React.Component {
   // When this component mounts
   componentDidMount() {
     console.log("mounted");
-    document.title = "Cartoon Employee"
+    document.title = "Cartoon Employee Directory"
     this.setState({ results: Cartoons });
   }
 
