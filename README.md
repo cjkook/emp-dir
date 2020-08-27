@@ -1,4 +1,4 @@
-# pwa-budget
+# Cartoon Employee Directory
 PWA Example
 
   * [Description](#description)
